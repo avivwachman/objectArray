@@ -1,2 +1,2 @@
-# objectArray
-School Work about object arrays, see pptx for question (in HE)
+# Array of objects work
+School Work abouא arrays of objectד, see pptx for questions (in HE)
