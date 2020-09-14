@@ -16,18 +16,18 @@ public class Main {
     System.out.println(Israel.toString());
 
     // Israel doesn't have Aviv
-    // Israel has the game pokemon!
+    // Israel has the game Pokemon!
 
     // From Class:
-    System.out.println("Israel has pokemon is " + Israel.isParticipateOne("Pokemon")); // True
+    System.out.println("Israel has Pokemon is " + Israel.isParticipateOne("Pokemon")); // True
     System.out.println("Israel has Aviv is " + Israel.isParticipateOne("Aviv")); // False
-    System.out.println("Israel has pokemon is " + Israel.isParticipateTwo("Pokemon")); // True
+    System.out.println("Israel has Pokemon is " + Israel.isParticipateTwo("Pokemon")); // True
     System.out.println("Israel has Aviv is " + Israel.isParticipateTwo("Aviv")); // False
 
     // From Static:
-    System.out.println("Israel has pokemon is " + isParticipateOne(Israel, "Pokemon")); // True
+    System.out.println("Israel has Pokemon is " + isParticipateOne(Israel, "Pokemon")); // True
     System.out.println("Israel has Aviv is " + isParticipateTwo(Israel, "Aviv")); // False
-    System.out.println("Israel has pokemon is " + isParticipateOne(Israel, "Pokemon")); // True
+    System.out.println("Israel has Pokemon is " + isParticipateOne(Israel, "Pokemon")); // True
     System.out.println("Israel has Aviv is " + isParticipateTwo(Israel, "Aviv")); // False
   }
 

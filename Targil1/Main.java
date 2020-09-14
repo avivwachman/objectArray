@@ -12,13 +12,14 @@ public class Main {
    // --------------Main--------------
 
     Channel[] array = new Channel[22];
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 10; i++)
         array[i]= new Channel(String.valueOf(i),i,0); //יצירת 10 ערוצי ספורט (מ0 עד 9 = 10)
-    }
-    array[10] = new Channel("10", 10, 4);//יצירת ערוץ ילדים נוסף (סהכ 11 ערוצי ספורט + ילדים)
-    for (int i = 11; i < array.length; i++) {
+
+    array[10] = new Channel("10", 10, 4); //יצירת ערוץ ילדים נוסף (סהכ 11 ערוצי ספורט + ילדים)
+
+    for (int i = 11; i < array.length; i++)
       array[i]= new Channel(String.valueOf(i),i,2); //מילוי שארית המערך בערוצים מסוג משפחה
-    }
+
    // System.out.println(Arrays.toString(array)); //-----------הדפסת המערך למען הנוחות-----------
     System.out.println(willAlon(array));
 
@@ -35,7 +36,7 @@ public class Main {
         if (channel.getType().equals("ילדים")) countK++; //חישוב כמות ערוצי הילדים
       }
     }
-    //ניתן לוותר על הגדרת הנתונים האלו אך אם נרצה לשנות את התנאים, כך יהיה יותר קל וכמו כן יותר מסודר בצורה זו
+    //ניתן לוותר על הגדרת הנתונים האלו ולשים מיד ב״משוואה״ אך אם נרצה לשנות את התנאים, כך יהיה יותר קל וכמו כן יותר מסודר בצורה זו
     double sum= countK + countS;
     double half = 0.5*array.length; //חצי מכמות הערוצים
     return countS >= 10 && sum >= half;
