@@ -13,6 +13,12 @@ public class Game {
         this.isWater = isWater;
     }
 
+  public Game(Game game) {
+    this.gameName = game.getGameName();
+    this.numPlayers = game.getNumPlayers();
+    this.isWater = game.isWater();
+    }
+
     public String getGameName() {
         return gameName;
     }

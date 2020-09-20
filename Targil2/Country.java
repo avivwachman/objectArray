@@ -39,14 +39,24 @@ public class Country {
         this.countryName = countryName;
     }
 
-    public Game[] getGames() {
-        return games;
+  public Game[] getGames() {
+    int size = this.games.length;
+    Game[] back = new Game[size]; //create new array of games in memory
+    if(this.getCurrentGames()==0)
+        return back; //in this case no need to fill because we don't have what to fill
+    for (int i = 0; i < size; i++) {
+        if(this.games[i]!=null)
+      back[i] = new Game(this.games[i]);
+    }
+    return back;
     }
 
-    public void setGames(Game[] games) {
-        this.games = games;
+  public void setGames(Game[] games) {
+    int n = this.games.length;
+    for (int i = 0; i < n; i++) {
+      if (games[i] != null) this.games[i] = new Game(games[i]);
     }
-
+    }
 
     @Override
     public String toString() {
@@ -60,10 +70,11 @@ public class Country {
   // ----------------------add game to array!--------------
 
   public void addGame(Game play) {
-    this.getGames()[this.getCurrentGames()] = play;
+    Game[] my = this.getGames();
+    my[this.getCurrentGames()] = play;
+    this.setGames(my);
     this.setCurrentGames(this.getCurrentGames() + 1);
     }
-
 
 
   // --------------Can be done in class these ways (also done in main method as static)----------

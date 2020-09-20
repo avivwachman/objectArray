@@ -30,15 +30,19 @@ public class Main {
   public static boolean willAlon(Channel[] array) {
     int countS = 0; //Sport
     int countK = 0; //Kids
+    int all =0;
     for (Channel channel : array) { //כל המערך
-      if (channel.getType().equals("ספורט")) countS++;//חישוב כמות ערוצי הספורט
-      else { //  elif in Python :)
-        if (channel.getType().equals("ילדים")) countK++; //חישוב כמות ערוצי הילדים
+      if (channel != null) {
+        all+=1;
+        if (channel.getType().equals("ספורט")) countS++; // חישוב כמות ערוצי הספורט
+        else { //  elif in Python :)
+          if (channel.getType().equals("ילדים")) countK++; // חישוב כמות ערוצי הילדים
+        }
       }
     }
     //ניתן לוותר על הגדרת הנתונים האלו ולשים מיד ב״משוואה״ אך אם נרצה לשנות את התנאים, כך יהיה יותר קל וכמו כן יותר מסודר בצורה זו
     double sum= countK + countS;
-    double half = 0.5*array.length; //חצי מכמות הערוצים
+    double half = 0.5*all; //חצי מכמות הערוצים
     return countS >= 10 && sum >= half;
   }
 

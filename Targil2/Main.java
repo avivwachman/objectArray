@@ -17,7 +17,7 @@ public class Main {
 
     // Israel doesn't have Aviv
     // Israel has the game Pokemon!
-
+    System.out.println(Pokemon.toString());
     // From Class:
     System.out.println("Israel has Pokemon is " + Israel.isParticipateOne("Pokemon")); // True
     System.out.println("Israel has Aviv is " + Israel.isParticipateOne("Aviv")); // False
