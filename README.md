@@ -1,2 +1,2 @@
 # Array of objects work
-School Work abouא arrays of objectד, see pptx for questions (in HE)
+School Work about arrays of objects, see pptx for questions (in HE)
